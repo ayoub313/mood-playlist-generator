@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="mood_model.js"></script>
+</head>
+
+<body>
+    <h1>Mood Playlist Generator</h1>
+    <label for="mood-input">Enter your mood:</label>
+    <input type="text" id="mood-input">
+    <button onclick="searchSongs(event.target.dataset.mood)">Search Songs</button>
+    <ul id="search-results"></ul>
+    <button onclick="savePlaylist()">Save Playlist</button>
+    <ul id="playlist"></ul>
+</body>
+<script>
+
+    let playlist = [];
+    function addToPlayList(song) {
+        playlist.push(song);
+        displayPlaylist();
+    }
+
+    function displayPlaylist()
+    {
+        const playlistElement = document.getElementById('playlist');
+        playlistElement.innerHTML= '';
+        
+    }
+</script>
+
+</html>
